@@ -31,10 +31,18 @@ public class Renderer extends JFrame {
 		queue = new ArrayList<Renderable>();
 	}
 	
+	/**
+	 * Gets the renderer's screen dimensions
+	 * @return the screen's current dimensions
+	 */
 	public Dimension getScreenDimensions() {
 		return getSize();
 	}
 	
+	/**
+	 * Sets the renderer's screen dimensions
+	 * @param d the new screen dimensions
+	 */
 	public void setScreenDimensions(Dimension d) {
 		setSize(d);
 	}
