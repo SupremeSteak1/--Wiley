@@ -1,4 +1,5 @@
 package engine.backend.graphics;
+import java.awt.Dimension;
 import java.util.ArrayList;
 
 import javax.swing.JFrame;
@@ -28,6 +29,14 @@ public class Renderer extends JFrame {
 		setResizable(false);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		queue = new ArrayList<Renderable>();
+	}
+	
+	public Dimension getScreenDimensions() {
+		return getSize();
+	}
+	
+	public void setScreenDimensions(Dimension d) {
+		setSize(d);
 	}
 	
 	/**
