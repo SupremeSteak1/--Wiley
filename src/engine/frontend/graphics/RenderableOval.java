@@ -28,6 +28,20 @@ public class RenderableOval implements Renderable {
 	}
 	
 	/**
+	 * A RenderableOval is a class which will render an oval to the screen
+	 * @param x the x coordinate of the oval
+	 * @param y the y coordinate of the oval
+	 * @param width the width of the oval
+	 * @param height the height of the oval
+	 */
+	public RenderableOval(double x, double y, double width, double height) {
+		this.x = (int) Math.round(x);
+		this.y = (int) Math.round(y);
+		this.width = (int) Math.round(width);
+		this.height = (int) Math.round(height);
+	}
+	
+	/**
 	 * Render the oval to the screen using the given graphics object
 	 */
 	public void render(Graphics2D g2d) {

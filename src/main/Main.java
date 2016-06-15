@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import engine.backend.graphics.Renderer;
 import engine.frontend.graphics.Renderable;
-import engine.frontend.graphics.RenderableOval;
+import engine.frontend.graphics.RenderableText;
 
 public class Main {
 	
@@ -13,11 +13,14 @@ public class Main {
 		r.setLocationRelativeTo(null);
 		r.setVisible(true);
 		ArrayList<Renderable> renderQueue = new ArrayList<Renderable>();
-		renderQueue.add(new RenderableOval(0,0,101,100));
+		renderQueue.add(new RenderableText("AHHHHHH git commit -m", 20, 20));
+		//GameObjectHandler.registerGameObject(new RigidBody(new Vector(0,0)));
 		r.addToQueue(renderQueue);
 		while(true) {
 			r.setQueue(renderQueue);
 			r.refreshQueue();
+			//GameObjectHandler.updateGameObjects();
+			//GameObjectHandler.renderGameObjects(r);
 			r.repaint();
 			r.validate();
 			r.revalidate();
