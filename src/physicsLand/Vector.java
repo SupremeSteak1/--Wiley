@@ -9,6 +9,17 @@ public class Vector {
 		this.y = y;
 	}
 	
+	public Vector(double angle, double magnitude, boolean polar){
+		this.x = Math.cos(angle) * magnitude;
+		this.y = Math.sin(angle) * magnitude;
+	}
+	
+	/**
+	 * This function allows for the dot product of two vectors
+	 * to be calculated
+	 * @param other the vector to be dotted with
+	 * @return the value of the dot product
+	 */
 	public double dotProduct(Vector other){
 		return (this.x*other.getX()) + (this.y*other.getY());
 	}
@@ -26,6 +37,15 @@ public class Vector {
 		this.y = y;
 	}
 	
+	public double getPolarAngle(){
+		if(x==0) return Math.PI/2 + y>0 ? Math.PI:0;
+		return Math.atan(y/x);
+	}
+	
+	/**
+	 * This method calculates the magnitude of a vector
+	 * @return the magnitude of the vector
+	 */
 	public double getMagnitude(){
 		return Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2));
 	}
